@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"],
+      "Flowbite/*": ["node_modules/flowbite-react/lib/esm/*"]
+    },
     "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": false,
