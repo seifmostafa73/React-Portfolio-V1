@@ -2,7 +2,7 @@ import { ProjectCardProps } from "../Sections/ProjectsSection";
 import SectorImage from "../Images/sectorlogo.png";
 import FreeLanceLogo from "../Images/freelancer-icon.svg";
 import { ExperinceInfo } from "../Sections/ExperienceSection";
-import { listItem } from "../Components/InfiniteScrollList";
+import { listItem } from "../components/InfiniteScrollList";
 
 //#region  Import your images
 import ReactIcon from "../Images/react_icon.svg";

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import CardSpotlightEffect from "../Components/CardSpotlightEffect";
+import CardSpotlightEffect from "../components/CardSpotlightEffect";
 import { Carousel } from "flowbite-react";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { projectsData } from "../Data/constants";
-import BadgeOutlined from "../Components/Badge";
+import BadgeOutlined from "../components/Badge";
 
 type MockUpType = "mobile" | "desktop" | "None";
 
@@ -100,7 +100,7 @@ function ProjectCard(props: ProjectCardProps) {
   return (
     <div
       ref={ref}
-      className="regular:min-h-screen flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center regular:min-h-screen"
     >
       <CardSpotlightEffect>
         <h1 className="pb-4 text-left font-bold text-accent">
@@ -180,7 +180,7 @@ export default function ProjectsSection(props: any) {
         <p className=" font-numbers text-accent">03.</p> Projects
       </h1>
 
-      <div className="regular:flex-row regular:gap-0 regular:items-start  flex min-h-screen flex-col items-center justify-center gap-40">
+      <div className="flex min-h-screen flex-col  items-center justify-center gap-40 regular:flex-row regular:items-start regular:gap-0">
         {!isSmall && (
           <React.Fragment>
             {" "}

@@ -1,7 +1,7 @@
 import React from "react";
 import InfiniteScrollList, {
   InfiniteScrollDirection,
-} from "../Components/InfiniteScrollList";
+} from "../components/InfiniteScrollList";
 import { profileImage, technologyItems } from "../Data/constants";
 
 export default function AboutMeSection() {

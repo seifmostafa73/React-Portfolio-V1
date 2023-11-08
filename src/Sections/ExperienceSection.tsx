@@ -1,6 +1,6 @@
 import React from "react";
-import CardSpotlightEffect from "../Components/CardSpotlightEffect";
-import BadgeOutlined from "../Components/Badge";
+import CardSpotlightEffect from "../components/CardSpotlightEffect";
+import BadgeOutlined from "../components/Badge";
 import { workExperiences } from "../Data/constants";
 
 export type ExperinceInfo = {
@@ -57,7 +57,7 @@ export default function ExperienceSection() {
       <h1 className=" mb-10 inline-flex w-full self-start text-2xl font-semibold after:my-auto after:ml-5 after:h-[1px] after:w-3/4 after:bg-white after:content-['']">
         <p className="font-numbers text-accent">02.</p> Experience
       </h1>
-      <div className=" regular:[mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-64px),transparent_100%)] regular:px-10 flex w-full flex-row justify-start gap-10 overflow-x-auto pb-10 align-middle ">
+      <div className=" flex w-full flex-row justify-start gap-10 overflow-x-auto pb-10 align-middle regular:px-10 regular:[mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-64px),transparent_100%)] ">
         {ExperinceCards}
       </div>
     </React.Fragment>
