@@ -3,7 +3,19 @@ import SectorImage from "../Images/sectorlogo.png";
 import FreeLanceLogo from "../Images/freelancer-icon.svg";
 import { ExperinceInfo } from "../Sections/ExperienceSection";
 import { listItem } from "../Components/InfiniteScrollList";
-const images: __WebpackModuleApi.RequireContext = require.context("../Images");
+
+//#region  Import your images
+import ReactIcon from "../Images/react_icon.svg";
+import tailwindCSSIcon from "../Images/tailwind-css.svg";
+import PyQtIcon from "../Images/PyQt.svg";
+import Unity3DIcon from "../Images/unity-svgrepo-com.svg";
+import JavaSwingIcon from "../Images/java-swing.svg";
+import KerasIcon from "../Images/keras-svgrepo-com.svg";
+import PytorchIcon from "../Images/pytorch-svgrepo-com.svg";
+import FirebaseIcon from "../Images/firebase-svgrepo-com.svg";
+import MQTTIcon from "../Images/Mqtt-hor.svg";
+import MySqlIcon from "../Images/mysql-logo-svgrepo-com.svg";
+//#endregion
 
 export const profileImage =
   "https://avatars.githubusercontent.com/u/55613060?s=400&u=615b29b033a9397fc09d772f6c4891f1d99bebbf&v=4";
@@ -165,44 +177,44 @@ export const technologyItems: listItem[] = [
     alt: ".NET",
   },
   {
-    src: images("./react_icon.svg"),
+    src: ReactIcon,
     alt: "React",
   },
   {
-    src: images("./tailwind-css.svg"),
+    src: tailwindCSSIcon,
     alt: "Tailwind CSS",
   },
   {
-    src: images("./PyQt.svg"),
+    src: PyQtIcon,
     alt: "PYQt5",
   },
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/b/bb/WxWidgets.svg",
     alt: "wxPython",
   },
-  { src: images("./unity-svgrepo-com.svg"), alt: "Unity3D" },
+  { src: Unity3DIcon, alt: "Unity3D" },
   {
-    src: images("./java-swing.svg"),
+    src: JavaSwingIcon,
     alt: "Java Swing",
   },
   {
-    src: images("./keras-svgrepo-com.svg"),
+    src: KerasIcon,
     alt: "Keras",
   },
   {
-    src: images("./pytorch-svgrepo-com.svg"),
+    src: PytorchIcon,
     alt: "Pytorch",
   },
   {
-    src: images("./firebase-svgrepo-com.svg"),
+    src: FirebaseIcon,
     alt: "Firebase",
   },
   {
-    src: images("./Mqtt-hor.svg"),
+    src: MQTTIcon,
     alt: "MQTT Mosquito",
   },
   {
-    src: images("./mysql-logo-svgrepo-com.svg"),
+    src: MySqlIcon,
     alt: "MySql",
   },
 ];
