@@ -11,7 +11,7 @@ export default function ContactMeSection() {
       <p className="mb-10 text-center text-lg">
         I'm actively looking for new opportunities, my inbox is always open.
         <br />
-        you can contact me via any of these socail platoforms
+        you can contact me via any of these socail platforms
         <br />
       </p>
       <div className="flex gap-4">
