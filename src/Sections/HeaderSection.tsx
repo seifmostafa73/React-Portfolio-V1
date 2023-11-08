@@ -1,5 +1,5 @@
 import React from "react";
-import { TextTypingEffectWithTexts } from "../components/TypingEffectText";
+import { TextTypingEffectWithTexts } from "../Components/TypingEffectText";
 
 export default function HeaderSection() {
   return (
