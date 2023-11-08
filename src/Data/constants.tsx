@@ -1,10 +1,14 @@
 import { ProjectCardProps } from "../Sections/ProjectsSection";
 import SectorImage from "../Images/sectorlogo.png";
+import PortfolioSS_1 from "../Images/PortfolioSS1.png";
+import PortfolioSS_2 from "../Images/PortfolioSS2.png";
+import PortfolioSS_3 from "../Images/PortfolioSS3.png";
+
 import FreeLanceLogo from "../Images/freelancer-icon.svg";
 import { ExperinceInfo } from "../Sections/ExperienceSection";
 import { listItem } from "../Components/InfiniteScrollList";
 
-//#region  Import your images
+//#region Images
 import ReactIcon from "../Images/react_icon.svg";
 import tailwindCSSIcon from "../Images/tailwind-css.svg";
 import PyQtIcon from "../Images/PyQt.svg";
@@ -87,6 +91,21 @@ export const projectsData: ProjectCardProps[] = [
     videos: [
       "https://user-images.githubusercontent.com/55613060/175782833-ba9e5bd8-0ca3-43d5-b4dc-be0143c89b33.mp4",
     ],
+    type: "desktop",
+  },
+  {
+    projectName: "Web Portfolio V1",
+    description:
+      "Created a web porfolio using React and Tailwind CSS as part of `the odin project`, utilizing numerous react hooks and implmenting custom ones, I managed to implement some complex effects and animations",
+    year: 2023,
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Web development",
+      "HTML & CSS",
+      "Front-end",
+    ],
+    images: [PortfolioSS_1, PortfolioSS_2, PortfolioSS_3],
     type: "desktop",
   },
 ];

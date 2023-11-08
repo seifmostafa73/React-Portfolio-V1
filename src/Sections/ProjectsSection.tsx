@@ -31,7 +31,7 @@ function ProjectImage(props: ProjectImageProps) {
   const screensSlider: React.JSX.Element = (
     <Carousel
       slideInterval={props.scrollDelay}
-      className="aspect-square  bg-gray-900"
+      className="aspect-video bg-gray-900"
     >
       {props.screens?.map((screen, index) => {
         return (
@@ -56,21 +56,38 @@ function ProjectImage(props: ProjectImageProps) {
         <div className="absolute -right-[17px] top-[142px] h-[64px] w-[3px] rounded-r-lg bg-gray-800 dark:bg-gray-800"></div>
         <div className="flex h-[572px] w-[272px] overflow-hidden rounded-[2rem] bg-white dark:bg-gray-800">
           {props.screens && screensSlider}
-          {props.videos && <video src={props.videos[0]} autoPlay loop />}
+          {props.videos && (
+            <video
+              className="aspect-video"
+              src={props.videos[0]}
+              autoPlay
+              loop
+            />
+          )}
         </div>
       </div>
     );
   } else {
     return (
       <React.Fragment>
-        <div className="relative mx-auto h-[172px] max-w-[301px] rounded-t-xl border-[16px] border-gray-800 bg-gray-800 dark:border-gray-800 md:h-[294px] md:max-w-[512px]">
-          <div className="h-[140px] overflow-hidden rounded-xl md:h-[262px]">
+        <div className="mx-auto my-5 max-w-lg shadow-2xl ">
+          <div className="flex h-10 w-full items-center justify-start space-x-1.5 rounded-t-lg bg-gray-900 px-3">
+            <span className="h-3 w-3 rounded-full bg-red-400"></span>
+            <span className="h-3 w-3 rounded-full bg-yellow-400"></span>
+            <span className="h-3 w-3 rounded-full bg-green-400"></span>
+          </div>
+          <div className="h-fit w-full border-t-0 bg-primary">
             {props.screens && screensSlider}
-            {props.videos && <video src={props.videos[0]} autoPlay loop />}{" "}
+            {props.videos && (
+              <video
+                className="aspect-video"
+                src={props.videos[0]}
+                autoPlay
+                loop
+              />
+            )}{" "}
           </div>
         </div>
-        <div className="relative mx-auto h-[24px] max-w-[301px] rounded-b-xl bg-gray-900 dark:bg-gray-700 md:h-[42px] md:max-w-[512px]"></div>
-        <div className="relative mx-auto h-[55px] max-w-[83px] rounded-b-xl bg-gray-800 md:h-[95px] md:max-w-[142px]"></div>
       </React.Fragment>
     );
   }
