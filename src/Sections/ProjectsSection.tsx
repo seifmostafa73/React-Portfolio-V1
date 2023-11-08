@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import CardSpotlightEffect from "../components/CardSpotlightEffect";
+import CardSpotlightEffect from "../Components/CardSpotlightEffect";
 import { Carousel } from "flowbite-react";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { projectsData } from "../Data/constants";
-import BadgeOutlined from "../components/Badge";
+import BadgeOutlined from "../Components/Badge";
 
 type MockUpType = "mobile" | "desktop" | "None";
 

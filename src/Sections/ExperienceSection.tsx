@@ -1,6 +1,6 @@
 import React from "react";
-import CardSpotlightEffect from "../components/CardSpotlightEffect";
-import BadgeOutlined from "../components/Badge";
+import CardSpotlightEffect from "../Components/CardSpotlightEffect";
+import BadgeOutlined from "../Components/Badge";
 import { workExperiences } from "../Data/constants";
 
 export type ExperinceInfo = {
