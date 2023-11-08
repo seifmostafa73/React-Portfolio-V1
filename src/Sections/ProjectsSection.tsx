@@ -139,6 +139,11 @@ function ProjectCard(props: ProjectCardProps) {
 }
 
 export default function ProjectsSection(props: any) {
+  const [section, sectionThreshold] = useIntersectionObserver({
+    threshold: 0.05,
+    root: null,
+    rootMargin: "80px",
+  });
   const [isSmall, setIsSmall] = React.useState<boolean>(
     window.innerWidth < 900,
   );
@@ -192,12 +197,20 @@ export default function ProjectsSection(props: any) {
   }
 
   return (
-    <div className="py-20" id={props.id}>
+    <div
+      className={`py-20 ${
+        sectionThreshold?.isIntersecting ? "opacity-100" : "opacity-0"
+      } transition-opacity delay-500 duration-[1500ms]`}
+      id={props.id}
+    >
       <h1 className=" inline-flex w-full self-start text-2xl font-semibold after:my-auto after:ml-5 after:h-[1px] after:w-3/4 after:bg-white after:content-['']">
         <p className=" font-numbers text-accent">03.</p> Projects
       </h1>
 
-      <div className="flex min-h-screen flex-col  items-center justify-center gap-40 regular:flex-row regular:items-start regular:gap-0">
+      <div
+        ref={section}
+        className={` flex min-h-screen flex-col  items-center justify-center gap-40 regular:flex-row regular:items-start regular:gap-0`}
+      >
         {!isSmall && (
           <React.Fragment>
             {" "}
