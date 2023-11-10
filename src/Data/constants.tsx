@@ -1,4 +1,5 @@
-import { ProjectCardProps } from "../Sections/ProjectsSection";
+import { ProjectCardProps } from "Components/ProjectCard";
+
 import SectorImage from "../Images/sectorlogo.png";
 import PortfolioSS_1 from "../Images/PortfolioSS1.png";
 import PortfolioSS_2 from "../Images/PortfolioSS2.png";

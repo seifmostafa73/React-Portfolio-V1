@@ -1,142 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import CardSpotlightEffect from "../Components/CardSpotlightEffect";
-import { Carousel } from "flowbite-react";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { projectsData } from "../Data/constants";
-import BadgeOutlined from "../Components/Badge";
-
-type MockUpType = "mobile" | "desktop" | "None";
-
-interface ProjectImageProps {
-  screens?: string[];
-  videos?: string[];
-  scrollDelay: number;
-  alt: string;
-  type?: MockUpType;
-  className?: string;
-}
-
-export interface ProjectCardProps {
-  projectName: string;
-  year: number;
-  description: string;
-  technologies?: string[];
-  type?: MockUpType;
-  images?: string[];
-  videos?: string[];
-  onVisibleCallback?: () => void;
-}
-
-function ProjectImage(props: ProjectImageProps) {
-  const screensSlider: React.JSX.Element = (
-    <Carousel
-      slideInterval={props.scrollDelay}
-      className="aspect-video bg-gray-900"
-    >
-      {props.screens?.map((screen, index) => {
-        return (
-          <div className="aspect-w-16 aspect-h-9 bg-black">
-            <img
-              src={screen}
-              alt={props.alt}
-              className="h-full w-full object-scale-down"
-            />
-          </div>
-        );
-      })}
-    </Carousel>
-  );
-
-  if (props.type === "mobile") {
-    return (
-      <div className="relative mx-auto h-[600px] w-[300px] rounded-[2.5rem] border-[14px] border-gray-800 bg-gray-800 dark:border-gray-800">
-        <div className="absolute -left-[17px] top-[72px] h-[32px] w-[3px] rounded-l-lg bg-gray-800 dark:bg-gray-800"></div>
-        <div className="absolute -left-[17px] top-[124px] h-[46px] w-[3px] rounded-l-lg bg-gray-800 dark:bg-gray-800"></div>
-        <div className="absolute -left-[17px] top-[178px] h-[46px] w-[3px] rounded-l-lg bg-gray-800 dark:bg-gray-800"></div>
-        <div className="absolute -right-[17px] top-[142px] h-[64px] w-[3px] rounded-r-lg bg-gray-800 dark:bg-gray-800"></div>
-        <div className="flex h-[572px] w-[272px] overflow-hidden rounded-[2rem] bg-white dark:bg-gray-800">
-          {props.screens && screensSlider}
-          {props.videos && (
-            <video
-              className="aspect-video"
-              src={props.videos[0]}
-              autoPlay
-              loop
-            />
-          )}
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <React.Fragment>
-        <div className="mx-auto my-5 max-w-lg shadow-2xl ">
-          <div className="flex h-10 w-full items-center justify-start space-x-1.5 rounded-t-lg bg-gray-900 px-3">
-            <span className="h-3 w-3 rounded-full bg-red-400"></span>
-            <span className="h-3 w-3 rounded-full bg-yellow-400"></span>
-            <span className="h-3 w-3 rounded-full bg-green-400"></span>
-          </div>
-          <div className="h-fit w-full border-t-0 bg-primary">
-            {props.screens && screensSlider}
-            {props.videos && (
-              <video
-                className="aspect-video"
-                src={props.videos[0]}
-                autoPlay
-                loop
-              />
-            )}{" "}
-          </div>
-        </div>
-      </React.Fragment>
-    );
-  }
-}
-
-function ProjectCard(props: ProjectCardProps) {
-  const [ref, entry] = useIntersectionObserver({
-    threshold: 0.5,
-    root: null,
-    rootMargin: "40px",
-  });
-
-  const hasCallbackRun = useRef(false);
-
-  if (
-    entry?.isIntersecting &&
-    props.onVisibleCallback &&
-    !hasCallbackRun.current
-  ) {
-    props.onVisibleCallback();
-    hasCallbackRun.current = true;
-  }
-  if (entry?.isIntersecting === false) {
-    hasCallbackRun.current = false;
-  }
-
-  return (
-    <div
-      ref={ref}
-      className="flex flex-col items-center justify-center regular:min-h-screen"
-    >
-      <CardSpotlightEffect>
-        <h1 className="pb-4 text-left font-bold text-accent">
-          {props.projectName}
-        </h1>
-        <h2 className="pb-4 text-left font-numbers">{props.year}</h2>
-        <p className="text-justify text-xs">{props.description}</p>
-
-        {props.technologies && (
-          <div className="flex flex-row flex-wrap justify-start gap-2 px-4 pb-4 pt-8">
-            {props.technologies.map((tag) => {
-              return <BadgeOutlined color="accent" text={tag} />;
-            })}
-          </div>
-        )}
-      </CardSpotlightEffect>
-    </div>
-  );
-}
+import ProjectImage from "../Components/ProjectImage";
+import ProjectCard from "../Components/ProjectCard";
 
 export default function ProjectsSection(props: any) {
   const [section, sectionThreshold] = useIntersectionObserver({
@@ -150,15 +16,14 @@ export default function ProjectsSection(props: any) {
   const [currentProject, setCurrentProject] = React.useState<number>(0);
   const mockContainer = useRef<HTMLDivElement>(null);
 
-  function handleScreenResize() {
-    setIsSmall(window.innerWidth < 900);
-  }
-
   useEffect(() => {
     window.addEventListener("resize", handleScreenResize);
     return () => window.removeEventListener("resize", handleScreenResize);
   });
 
+  function handleScreenResize() {
+    setIsSmall(window.innerWidth < 900);
+  }
   function ChangeMockUp(projectInex: number) {
     if (!mockContainer.current || projectInex === currentProject) return;
 
