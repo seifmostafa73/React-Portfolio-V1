@@ -65,7 +65,7 @@ export default function ProjectsSection(props: any) {
     <div
       className={`py-20 ${
         sectionThreshold?.isIntersecting ? "opacity-100" : "opacity-0"
-      } transition-opacity delay-500 duration-[1500ms]`}
+      } transition-opacity delay-200 duration-[1500ms]`}
       id={props.id}
     >
       <h1 className=" inline-flex w-full self-start text-2xl font-semibold after:my-auto after:ml-5 after:h-[1px] after:w-3/4 after:bg-white after:content-['']">

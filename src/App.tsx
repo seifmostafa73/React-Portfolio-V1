@@ -26,7 +26,7 @@ function AppSection(props: SectionProps): React.JSX.Element {
       className={`flex ${props.isVertical ? "flex-col" : null}
         ${sectionThreshold?.isIntersecting ? "opacity-100" : "opacity-0"}
          min-h-screen items-center justify-center overflow-hidden transition-opacity 
-         delay-500 duration-[1500ms]`}
+         delay-200 duration-[1500ms]`}
     >
       {props.children}
     </section>
