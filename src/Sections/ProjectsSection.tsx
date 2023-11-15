@@ -68,7 +68,7 @@ export default function ProjectsSection(props: any) {
       } transition-opacity delay-200 duration-[1500ms]`}
       id={props.id}
     >
-      <h1 className=" inline-flex w-full self-start text-2xl font-semibold after:my-auto after:ml-5 after:h-[1px] after:w-3/4 after:bg-white after:content-['']">
+      <h1 className="mb-10 inline-flex w-full self-start text-2xl font-semibold after:my-auto after:ml-5 after:h-[1px] after:w-3/4 after:bg-white after:content-['']">
         <p className=" font-numbers text-accent">03.</p> Projects
       </h1>
 

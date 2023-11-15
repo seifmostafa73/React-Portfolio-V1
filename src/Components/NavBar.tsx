@@ -1,8 +1,8 @@
 import { useWindowScroll } from "@uidotdev/usehooks";
 import OctagonImage from "../Images/octagon-svgrepo-com.svg";
 import React, { useDebugValue } from "react";
-import { transform } from "typescript";
-//#region Logo
+
+//#regin Logo
 interface LogoProps {
   href: string;
   onClick?: () => void;
@@ -45,6 +45,7 @@ export default function NavBar(): JSX.Element {
   const sideMenu = React.useRef<HTMLDivElement>(null);
   const sideMenuState = React.useRef<boolean>(false);
   const overLay = React.useRef<HTMLDivElement>(null);
+
   if (y) {
     if (y > lastY.current) {
       isVisible.current = false;
