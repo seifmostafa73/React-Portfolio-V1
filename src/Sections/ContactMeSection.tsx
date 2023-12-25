@@ -14,14 +14,14 @@ export default function ContactMeSection() {
         you can contact me via any of these social platforms
         <br />
       </p>
-      <div className="flex gap-4">
-        <a className="h-5 w-5" href={socialMediaLinks.github}>
+      <div className="flex gap-5">
+        <a className="h-10 w-10" href={socialMediaLinks.github}>
           <BsGithub color={"#64ffda"} />
         </a>
-        <a className="h-5 w-5" href={socialMediaLinks.linkedIn}>
+        <a className="h-10 w-10" href={socialMediaLinks.linkedIn}>
           <BsLinkedin color={"#64ffda"} />
         </a>
-        <a className="h-5 w-5" href={socialMediaLinks.gmail}>
+        <a className="h-10 w-10" href={socialMediaLinks.gmail}>
           <BsMailbox color={"#64ffda"} />
         </a>
       </div>
