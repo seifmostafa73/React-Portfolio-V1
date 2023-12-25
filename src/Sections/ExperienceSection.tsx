@@ -14,43 +14,50 @@ export type ExperinceInfo = {
   backgroundColor?: string;
 };
 
+const sortFunction = (a: ExperinceInfo, b: ExperinceInfo) => {
+  return a.startDate.getTime() - b.startDate.getTime();
+};
+
 export default function ExperienceSection() {
   const cardDateFormat: Intl.DateTimeFormatOptions = {
     month: "short",
     year: "numeric",
   };
 
-  const ExperinceCards = workExperiences.map((experience) => {
-    return (
-      <CardSpotlightEffect layoutClassName="flex flex-col items-center justify-center">
-        {/*This is the Expericne Image container*/}
-        <span
-          className={`mb-4 inline-flex items-center justify-center rounded-md bg-white p-2 shadow-lg`}
-        >
-          <img className="h-8 w-8" src={experience.imageUrl}></img>
-        </span>
+  const ExperinceCards = workExperiences
+    .sort(sortFunction)
+    .reverse()
+    .map((experience) => {
+      return (
+        <CardSpotlightEffect layoutClassName="flex flex-col items-center justify-center">
+          {/*This is the Expericne Image container*/}
+          <span
+            className={`mb-4 inline-flex items-center justify-center rounded-md bg-white p-2 shadow-lg`}
+          >
+            <img className="h-8 w-8" src={experience.imageUrl}></img>
+          </span>
 
-        <h1 className="pb-4">{experience.company} </h1>
+          <h1 className="pb-4">{experience.company} </h1>
 
-        <h2 className=" pb-4">{experience.title}</h2>
+          <h2 className=" pb-4">{experience.title}</h2>
 
-        {/*This is the Expericne Date header*/}
-        <h2 className="pb-4 font-numbers text-sm text-accent">
-          {experience.startDate.toLocaleString("default", cardDateFormat)} -{" "}
-          {experience.endDate.toLocaleString("default", cardDateFormat)}
-        </h2>
+          {/*This is the Expericne Date header*/}
+          <h2 className="pb-4 font-numbers text-sm text-accent">
+            {experience.startDate.toLocaleString("default", cardDateFormat)} -{" "}
+            {experience.endDate.toLocaleString("default", cardDateFormat)}
+          </h2>
 
-        <p className="text-justify text-xs">{experience.description}</p>
+          <p className="text-justify text-xs">{experience.description}</p>
 
-        {/*This is the Expericne tags container*/}
-        <div className="flex flex-row flex-wrap justify-start gap-2 px-4 pb-4 pt-8">
-          {experience.tags.map((tag) => {
-            return <BadgeOutlined color="accent" text={tag} />;
-          })}
-        </div>
-      </CardSpotlightEffect>
-    );
-  });
+          {/*This is the Expericne tags container*/}
+          <div className="flex flex-row flex-wrap justify-start gap-2 px-4 pb-4 pt-8">
+            {experience.tags.map((tag) => {
+              return <BadgeOutlined color="accent" text={tag} />;
+            })}
+          </div>
+        </CardSpotlightEffect>
+      );
+    });
 
   return (
     <React.Fragment>

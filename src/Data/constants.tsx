@@ -42,7 +42,6 @@ import FirebaseIcon from "../Images/firebase-svgrepo-com.svg";
 import MQTTIcon from "../Images/Mqtt-hor.svg";
 import MySqlIcon from "../Images/mysql-logo-svgrepo-com.svg";
 //#endregion
-
 export const profileImage =
   "https://avatars.githubusercontent.com/u/55613060?s=400&u=615b29b033a9397fc09d772f6c4891f1d99bebbf&v=4";
 
@@ -50,6 +49,7 @@ export const socialMediaLinks = {
   github: "https://github.com/seifmostafa73",
   linkedIn: "https://www.linkedin.com/in/seifmostafa/",
   gmail: "mailto:SeifMostafa7347@gmail.com",
+  leetcode: "https://leetcode.com/seifmostafa37/",
 };
 
 export const projectsData: ProjectCardProps[] = [
@@ -178,8 +178,8 @@ export const workExperiences: ExperinceInfo[] = [
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg",
     company: "Valeo",
-    startDate: new Date("2022-07"),
-    endDate: new Date("2022-10"),
+    startDate: new Date("2022-07T00:00:00Z"),
+    endDate: new Date("2022-10T00:00:00Z"),
     title: "Software Engineer Intern",
     description:
       "A two-month internship at CDV team, working on Image-enhancement tool with Wx python. Where I worked on a daily basis to add new functionalities, maintain and fix older code , Generate Test cases and documentation. The internship was extremely helpful to practice my problem-solving skills, Agile, SW engineering skills e.g., Testing, Documentation, Version Control, UML Design.",
@@ -199,8 +199,8 @@ export const workExperiences: ExperinceInfo[] = [
     imageUrl: SectorImage,
     company: "Sector B5",
     title: "Software Engineer Intern",
-    startDate: new Date("2021-07"),
-    endDate: new Date("2021-10"),
+    startDate: new Date("2021-07T00:00:00Z"),
+    endDate: new Date("2021-10T00:00:00Z"),
     description:
       "During my internship at Sector B5 in Smart Village, I engaged in a comprehensive program covering digital fabrication, electronics, embedded systems, PCB design, IoT, OpenCV, and ethical hacking. This hands-on experience equipped me with a versatile skill set, fostering innovation and a strong grasp of technology and security. I'm excited to apply these skills in a forward-thinking organization.",
     tags: [
@@ -219,8 +219,8 @@ export const workExperiences: ExperinceInfo[] = [
     imageUrl: FreeLanceLogo,
     company: "FreeLancing",
     title: "Desktop Software Engineer",
-    startDate: new Date("2023-03"),
-    endDate: new Date("2023-05"),
+    startDate: new Date("2023-03T00:00:00Z"),
+    endDate: new Date("2023-05T00:00:00Z"),
     description:
       "As a Full Stack Freelance Developer, I created an impressive application with a PyQt5 GUI and MySQL data storage. I integrated Google Drive and Folium map APIs, allowing lead registration and real-time updates with a Windows notification system. My work emphasized usability and data visualization, delivering a dynamic user experience.",
     tags: [
@@ -237,8 +237,8 @@ export const workExperiences: ExperinceInfo[] = [
     imageUrl: FreeLanceLogo,
     company: "FreeLancing",
     title: "Software engineer and System Designer",
-    startDate: new Date("2022-05"),
-    endDate: new Date("2022-07"),
+    startDate: new Date("2022-05T00:00:00Z"),
+    endDate: new Date("2022-07T00:00:00Z"),
     description:
       "I engineered a dynamic gaming system, complete with a Desktop Console app and a Mobile Controller app for ultimate flexibility. The Console app, powered by Unity3D, featured custom input through MQTT events, while the Controller app seamlessly communicated through MQTT and HTTP. By integrating Firebase, I provided user authentication and multiplayer room codes",
     tags: [
