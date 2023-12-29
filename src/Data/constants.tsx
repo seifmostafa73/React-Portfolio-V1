@@ -218,7 +218,7 @@ export const workExperiences: ExperinceInfo[] = [
   {
     imageUrl: FreeLanceLogo,
     company: "FreeLancing",
-    title: "Desktop Software Engineer",
+    title: "Application Software Engineer",
     startDate: new Date("2023-03T00:00:00Z"),
     endDate: new Date("2023-05T00:00:00Z"),
     description:
