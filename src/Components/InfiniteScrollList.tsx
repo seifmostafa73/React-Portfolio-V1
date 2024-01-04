@@ -1,3 +1,4 @@
+import { Tooltip } from "flowbite-react";
 import React from "react";
 
 interface ItemProps {
@@ -7,11 +8,13 @@ interface ItemProps {
 function Item(props: ItemProps): React.JSX.Element {
   return (
     <li key={props.alt}>
-      <img
-        className="max-w-16: mx-4 max-h-16"
-        src={props.src}
-        alt={props.alt}
-      />
+      <Tooltip content={props.alt} placement="top">
+        <img
+          className="max-w-16: mx-4 max-h-16"
+          src={props.src}
+          alt={props.alt}
+        />
+      </Tooltip>
     </li>
   );
 }
