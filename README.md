@@ -1,1 +1,1 @@
-### Porfolio using React and tailwindCSS
+### Portfolio using React and tailwind CSS
