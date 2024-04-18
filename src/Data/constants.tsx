@@ -168,7 +168,7 @@ export const projectsData: ProjectCardProps[] = [
     projectName: "Full-stack Dashboard",
     year: 2024,
     description:
-      "using React , Tailwind Css for front-end along with .NET 8 as my backend framework, to build a full-stack dashboard for a real estate company.the dashboard included multiple features , like filtering , searching , uploading CSV files, to enhance perofrmance monitioring and visualizing data trends . in addition the backend handled multiple security concers by using JWT authentication , protected routes , and authorizing roles. additionlly i used bulk operation to ensure efficient data handling for large number of data uploaded.",
+      "using React , Tailwind Css for front-end along with .NET 8 as my backend framework, to build a full-stack dashboard for a real estate company.the dashboard included multiple features , like filtering , searching , uploading CSV files, to enhance perofrmance monitioring and visualizing data trends . in addition the backend handled multiple security concerns by using JWT authentication , protected routes , and authorizing roles. additionlly i used bulk operation to ensure efficient data handling for large number of data uploaded.",
     technologies: ["React", ".NET", "TailWind CSS","Front-end","Back-end","web","JWT","SQL"],
     images: [RES_SUMMARY_1, RES_SUMMARY_2, RES_SUMMARY_3, RES_SUMMARY_4],
     type: "desktop",
