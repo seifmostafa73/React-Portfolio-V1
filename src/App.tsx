@@ -14,7 +14,7 @@ interface SectionProps {
 
 function AppSection(props: SectionProps): React.JSX.Element {
   const [section, sectionThreshold] = useIntersectionObserver({
-    threshold: 0.35,
+    threshold: 0.25,
     root: null,
     rootMargin: "80px",
   });
@@ -26,7 +26,7 @@ function AppSection(props: SectionProps): React.JSX.Element {
       className={`flex ${props.isVertical ? "flex-col" : null}
         ${sectionThreshold?.isIntersecting ? "opacity-100" : "opacity-0"}
          min-h-screen items-center justify-center overflow-hidden transition-opacity 
-         delay-200 duration-[1500ms]`}
+         delay-100 duration-500 ease-in-out`}
     >
       {props.children}
     </section>

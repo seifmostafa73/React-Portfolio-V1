@@ -21,14 +21,16 @@ import RES_14 from "../Images/RES_14.jpeg";
 import RES_15 from "../Images/RES_15.jpeg";
 import RES_16 from "../Images/RES_16.jpeg";
 
-import XO_1 from "../Images/XO_1.jpeg";
-import XO_2 from "../Images/XO_2.jpeg";
-import XO_3 from "../Images/XO_3.jpeg";
-import XO_4 from "../Images/XO_4.jpeg";
+import RES_SUMMARY_1 from "../Images/RES_Summary.png"
+import RES_SUMMARY_2 from "../Images/RES_Summary_2.png"
+import RES_SUMMARY_3 from "../Images/RES_Summary_3.png"
+import RES_SUMMARY_4 from "../Images/RES_Summary_4.png"
 
 import FreeLanceLogo from "../Images/freelancer-icon.svg";
 import { ExperinceInfo } from "../Sections/ExperienceSection";
 import { listItem } from "../Components/InfiniteScrollList";
+
+import KoraStatsLogo from "../Images/KoraStatsLogo.png"
 
 //#region Images
 import ReactIcon from "../Images/react_icon.svg";
@@ -79,47 +81,6 @@ export const projectsData: ProjectCardProps[] = [
     type: "mobile",
   },
   {
-    projectName: "Real Estate Management System",
-    type: "desktop",
-    year: 2023,
-    description:
-      "I developed a robust real estate management system that harnessed the power of MySQL for data storage, Python for the backend, and PyQt5 for the frontend. This data-intensive application efficiently handled 40 leads per hour and boasted advanced features such as asynchronous updates, optimized database queries, extensive filtering options, real-time notifications, custom data visualization widgets, location mapping via the Folium API, scalability, and streamlined configuration management. This project highlighted my technical expertise in creating a comprehensive real estate management solution.",
-    technologies: [
-      "PyQt5",
-      "MySQL",
-      "Data Visualization",
-      "Drive API",
-      "Folium API",
-      "MQTT",
-    ],
-    images: [
-      RES_15,
-      RES_1,
-      RES_2,
-      RES_3,
-      RES_4,
-      RES_5,
-      RES_6,
-      RES_7,
-      RES_8,
-      RES_9,
-      RES_10,
-      RES_11,
-      RES_13,
-      RES_14,
-      RES_16,
-    ],
-  },
-  {
-    projectName: "XO Game",
-    year: 2022,
-    description:
-      "A simple XO game made with Unit3D , implementing minimax alpha-beta algorithm for the AI",
-    technologies: ["Unity3D", "C#", "AI"],
-    images: [XO_1, XO_2, XO_3, XO_4],
-    type: "desktop",
-  },
-  {
     projectName: "Museum Applications",
     year: 2022,
     description:
@@ -157,6 +118,38 @@ export const projectsData: ProjectCardProps[] = [
     type: "desktop",
   },
   {
+    projectName: "Real Estate Management System",
+    type: "desktop",
+    year: 2023,
+    description:
+      "I developed a robust real estate management system that harnessed the power of MySQL for data storage, Python for the backend, and PyQt5 for the frontend. This data-intensive application efficiently handled 40 leads per hour and boasted advanced features such as asynchronous updates, optimized database queries, extensive filtering options, real-time notifications, custom data visualization widgets, location mapping via the Folium API, scalability, and streamlined configuration management. This project highlighted my technical expertise in creating a comprehensive real estate management solution.",
+    technologies: [
+      "PyQt5",
+      "MySQL",
+      "Data Visualization",
+      "Drive API",
+      "Folium API",
+      "MQTT",
+    ],
+    images: [
+      RES_15,
+      RES_1,
+      RES_2,
+      RES_3,
+      RES_4,
+      RES_5,
+      RES_6,
+      RES_7,
+      RES_8,
+      RES_9,
+      RES_10,
+      RES_11,
+      RES_13,
+      RES_14,
+      RES_16,
+    ],
+  },
+  {
     projectName: "Web Portfolio V1",
     description:
       "Created a web porfolio using React and Tailwind CSS as part of `the odin project`, utilizing numerous react hooks and implmenting custom ones, I managed to implement some complex effects and animations",
@@ -169,6 +162,15 @@ export const projectsData: ProjectCardProps[] = [
       "Front-end",
     ],
     images: [PortfolioSS_1, PortfolioSS_2, PortfolioSS_3],
+    type: "desktop",
+  },
+   {
+    projectName: "Full-stack Dashboard",
+    year: 2024,
+    description:
+      "using React , Tailwind Css for front-end along with .NET 8 as my backend framework, to build a full-stack dashboard for a real estate company.the dashboard included multiple features , like filtering , searching , uploading CSV files, to enhance perofrmance monitioring and visualizing data trends . in addition the backend handled multiple security concers by using JWT authentication , protected routes , and authorizing roles. additionlly i used bulk operation to ensure efficient data handling for large number of data uploaded.",
+    technologies: ["React", ".NET", "TailWind CSS","Front-end","Back-end","web","JWT","SQL"],
+    images: [RES_SUMMARY_1, RES_SUMMARY_2, RES_SUMMARY_3, RES_SUMMARY_4],
     type: "desktop",
   },
 ];
@@ -234,20 +236,35 @@ export const workExperiences: ExperinceInfo[] = [
     backgroundColor: "white",
   },
   {
+    imageUrl: KoraStatsLogo,
+    company: "FreeLancing",
+    title: "Application Software Engineer",
+    startDate: new Date("2024-02T00:00:00Z"),
+    description:
+      "Working on Tools to enhance annotation creation efficiency and quality monitoring using QT6 and PHP .",
+    tags: [
+      "QT6",
+      "Software Development",
+      "Tooling",
+      "PHP",
+      "Software Engineering",
+    ],
+    backgroundColor: "white",
+  },
+  {
     imageUrl: FreeLanceLogo,
     company: "FreeLancing",
-    title: "Software engineer and System Designer",
-    startDate: new Date("2022-05T00:00:00Z"),
-    endDate: new Date("2022-07T00:00:00Z"),
+    title: "Full-stack Software Engineer",
+    startDate: new Date("2024-02T00:00:00Z"),
+    endDate: new Date("2024-04T00:00:00Z"),
     description:
-      "I engineered a dynamic gaming system, complete with a Desktop Console app and a Mobile Controller app for ultimate flexibility. The Console app, powered by Unity3D, featured custom input through MQTT events, while the Controller app seamlessly communicated through MQTT and HTTP. By integrating Firebase, I provided user authentication and multiplayer room codes",
+      "I utilize React and Tailwind CSS for the front-end, paired with .NET 8 as the backend framework, in crafting a comprehensive dashboard for a real estate company. This dashboard boasts a variety of features such as filtering, searching, and CSV file uploading, aimed at optimizing performance monitoring and visualizing data trends. Additionally, the backend addresses numerous security concerns through JWT authentication, protected routes, and role authorization. Furthermore, I implement bulk operations to ensure efficient handling of large volumes of uploaded data.",
     tags: [
-      "Unity 3D",
-      "Game Development",
-      "Firebase",
-      "MQTT",
-      "HTTP",
-      "Software Engineering",
+      "Web Development",
+      "React",
+      "Tailwind CSS",
+      "SQL",
+      ".NET",
     ],
     backgroundColor: "white",
   },

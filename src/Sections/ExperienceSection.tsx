@@ -8,7 +8,7 @@ export type ExperinceInfo = {
   company: string;
   title: string;
   startDate: Date;
-  endDate: Date;
+  endDate?: Date;
   description: string;
   tags: string[];
   backgroundColor?: string;
@@ -44,7 +44,7 @@ export default function ExperienceSection() {
           {/*This is the Expericne Date header*/}
           <h2 className="pb-4 font-numbers text-sm text-accent">
             {experience.startDate.toLocaleString("default", cardDateFormat)} -{" "}
-            {experience.endDate.toLocaleString("default", cardDateFormat)}
+            {experience.endDate?.toLocaleString("default", cardDateFormat) || "Current"}
           </h2>
 
           <p className="text-justify text-xs">{experience.description}</p>
