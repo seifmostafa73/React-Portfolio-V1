@@ -237,7 +237,7 @@ export const workExperiences: ExperinceInfo[] = [
   },
   {
     imageUrl: KoraStatsLogo,
-    company: "FreeLancing",
+    company: "KoraStats",
     title: "Application Software Engineer",
     startDate: new Date("2024-02T00:00:00Z"),
     description:
